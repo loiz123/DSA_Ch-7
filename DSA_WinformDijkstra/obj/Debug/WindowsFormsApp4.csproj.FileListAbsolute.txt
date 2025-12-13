@@ -1,0 +1,54 @@
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.AssemblyReference.cache
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Properties.Resources.resources
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.GenerateResource.cache
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.CoreCompileInputs.cache
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe.config
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.pdb
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsF.D9406B00.Up2Date
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.exe
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.pdb
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.exe.config
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\obj\Debug\Form1.resources
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\EntityFramework.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\GMap.NET.Core.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\System.Data.SqlClient.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\System.Data.SQLite.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\EntityFramework.xml
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\System.Data.SqlClient.xml
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\System.Data.SQLite.xml
+C:\Users\DAI PHAT\source\repos\WindowsFormsApp4\WindowsFormsApp4\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe.config
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.exe
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\WindowsFormsApp4.pdb
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\EntityFramework.dll
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\System.Data.SqlClient.dll
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\System.Data.SQLite.dll
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\EntityFramework.xml
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\System.Data.SqlClient.xml
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\System.Data.SQLite.xml
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.AssemblyReference.cache
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\Form1.resources
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.Properties.Resources.resources
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.GenerateResource.cache
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.csproj.CoreCompileInputs.cache
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsF.D9406B00.Up2Date
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.exe
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.pdb
+C:\Users\DAI PHAT\Downloads\WindowsFormsApp4 - Copy\WindowsFormsApp4 - Copy\WindowsFormsApp4\obj\Debug\WindowsFormsApp4.exe.config
