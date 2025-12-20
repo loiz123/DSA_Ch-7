@@ -111,7 +111,7 @@ public class Graph
         return total;
     }
 
-    // (Giữ nguyên phương thức Dijkstra của bạn, nó có vẻ đúng về mặt logic)
+
     
 
     public MyList<Edge> GetEdges()
@@ -147,4 +147,5 @@ public class Graph
     {
         get { return adjList; }
     }
+
 }
