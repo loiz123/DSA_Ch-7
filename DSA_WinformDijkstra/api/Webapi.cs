@@ -13,7 +13,7 @@ public class WebApiService
     public WebApiService()
     {
         manager = new GraphManager();
-        InitRandomGraph(50, 70); // 50 node – 80 cạnh
+        InitRandomGraph(10, 15); 
     }
 
     // -------------------------------------------------------
@@ -149,3 +149,4 @@ public class WebApiService
         response.OutputStream.Write(buffer, 0, buffer.Length);
     }
 }
+
