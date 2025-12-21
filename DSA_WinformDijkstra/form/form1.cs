@@ -241,7 +241,7 @@ public partial class Form1 : Form
     }
     private List<string> tempPath = null;
 
-    private void btnFind_Click(object sender, EventArgs e)
+    private async void btnFind_Click(object sender, EventArgs e)
     {
         if (cbStart.SelectedItem == null || cbEnd.SelectedItem == null)
         {
@@ -249,159 +249,58 @@ public partial class Form1 : Form
             return;
         }
 
-        string start = cbStart.SelectedItem.ToString();
-        string end = cbEnd.SelectedItem.ToString();
-
         if (listAlgorithms.SelectedItem == null)
         {
-            MessageBox.Show("Hãy chọn một thuật toán!");
+            MessageBox.Show("Chọn thuật toán!");
             return;
         }
 
+        string start = cbStart.SelectedItem.ToString();
+        string end = cbEnd.SelectedItem.ToString();
         string algorithm = listAlgorithms.SelectedItem.ToString();
 
         listBoxSteps.Items.Clear();
         listBoxSteps.Items.Add($"Thuật toán: {algorithm}");
 
-        TimingResult<List<string>> output = null;
-        double distance = 0;   // ⭐ dùng cho Dijkstra, A*, Bellman–Ford
-
-        switch (algorithm)
+        try
         {
-            // --------------------------------------------------
-            // BFS
-            // --------------------------------------------------
-            case "BFS":
-                output = MeasureTime(() =>
-                    BFSPath.FindPath(graph, start, end).ToList()
-                );
-                break;
+            using (HttpClient client = new HttpClient())
+            {
+                string url =
+                    $"http://localhost:5000/path" +
+                    $"?start={start}&end={end}&algo={algorithm}";
 
-            // --------------------------------------------------
-            // DFS
-            // --------------------------------------------------
-            case "DFS":
-                output = MeasureTime(() =>
-                    DFSPath.FindPath(graph, start, end).ToList()
-                );
-                break;
+                string json = await client.GetStringAsync(url);
 
-            // --------------------------------------------------
-            // DIJKSTRA
-            // --------------------------------------------------
-            case "Dijkstra":
+                ApiPathResult result =
+                    JsonConvert.DeserializeObject<ApiPathResult>(json);
+
+                // ---- HIỂN THỊ ----
+                listBoxSteps.Items.Add(
+                    $"Thời gian chạy: {result.milliseconds} ms");
+
+                if (result.distance > 0)
+                    listBoxSteps.Items.Add(
+                        $"Độ dài đường đi: {result.distance:F2}");
+
+                if (result.path != null && result.path.Length > 0)
                 {
-                    IShortestPathAlgorithm algo = new DijkstraAlgorithm();
-
-                    var result = MeasureTime(() =>
-                    {
-                        var r = algo.FindPath(graph, start, end);
-                        distance = r.distance;
-                        return r.path.ToList();
-                    });
-
-                    output = result;
-                    break;
+                    tempPath = result.path.ToList();
+                    AddWrappedArrowPath(listBoxSteps, tempPath, 30);
+                }
+                else
+                {
+                    tempPath = null;
+                    listBoxSteps.Items.Add("Không tìm thấy đường đi!");
                 }
 
-            // --------------------------------------------------
-            // A*
-            // --------------------------------------------------
-            case "A*":
-                {
-                    IShortestPathAlgorithm algo = new AStarAlgorithm();
-
-                    var result = MeasureTime(() =>
-                    {
-                        var r = algo.FindPath(graph, start, end);
-                        distance = r.distance;
-                        return r.path.ToList();
-                    });
-
-                    output = result;
-                    break;
-                }
-
-            // --------------------------------------------------
-            // BELLMAN–FORD
-            // --------------------------------------------------
-            case "Bellman-Ford":
-                {
-                    IShortestPathAlgorithm algo = new BellmanFordAlgorithm();
-
-                    var result = MeasureTime(() =>
-                    {
-                        var r = algo.FindPath(graph, start, end);
-                        distance = r.distance;
-                        return r.path.ToList();
-                    });
-
-                    output = result;
-                    break;
-                }
-
-            // --------------------------------------------------
-            // BIDIRECTIONAL DIJKSTRA
-            // --------------------------------------------------
-            case "Bidirectional Dijkstra":
-                {
-                    IShortestPathAlgorithm algo = new BidirectionalDijkstraAlgorithm();
-
-                    var result = MeasureTime(() =>
-                    {
-                        var r = algo.FindPath(graph, start, end);
-                        distance = r.distance;
-                        return r.path.ToList();
-                    });
-
-                    output = result;
-                    break;
-                }
-            case "Floyd-Warshall":
-                {
-                    IShortestPathAlgorithm algo = new FloydWarshallAlgorithm();
-
-                    var result = MeasureTime(() =>
-                    {
-                        var r = algo.FindPath(graph, start, end);
-                        distance = r.distance;
-                        return r.path.ToList();
-                    });
-
-                    output = result;
-                    break;
-                }
-
+                panelMap.Invalidate();
+            }
         }
-
-        if (output == null)
+        catch (Exception ex)
         {
-            MessageBox.Show("Không tìm thấy kết quả!");
-            return;
+            MessageBox.Show("Lỗi tìm đường: " + ex.Message);
         }
-
-        // --------------------------------------------------
-        // HIỂN THỊ KẾT QUẢ
-        // --------------------------------------------------
-        listBoxSteps.Items.Add($"Thời gian chạy: {output.Milliseconds} ms");
-
-        if (distance > 0)
-            listBoxSteps.Items.Add($"Độ dài đường đi: {distance:F2}");
-
-        if (output.Result != null && output.Result.Count > 0)
-        {
-            tempPath = output.Result;
-
-            int maxChars = listBoxSteps.Width /5 ;
-            AddWrappedArrowPath(listBoxSteps, tempPath, maxChars);
-        }
-        else
-        {
-            tempPath = null;
-            listBoxSteps.Items.Add("Không tìm thấy đường đi!");
-        }
-
-        panelMap.Invalidate();
     }
 
 
@@ -489,6 +388,14 @@ public partial class Form1 : Form
         public List<string> Path { get; set; }
         public double Distance { get; set; }
     }
+    public class ApiPathResult
+    {
+        public string algorithm { get; set; }
+        public string[] path { get; set; }
+        public double distance { get; set; }
+        public long milliseconds { get; set; }
+    }
+
 
     private Label label1;
     private Label label2;
