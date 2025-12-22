@@ -96,8 +96,6 @@ public class WebApiService
         listener.Prefixes.Add("http://localhost:5000/");
         listener.Start();
 
-        Console.WriteLine("🚀 API chạy tại http://localhost:5000/");
-
         while (true)
         {
             var context = await listener.GetContextAsync();
@@ -201,3 +199,4 @@ public class WebApiService
         response.OutputStream.Write(buffer, 0, buffer.Length);
     }
 }
+
