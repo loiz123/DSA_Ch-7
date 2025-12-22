@@ -31,6 +31,7 @@
                 }
             }
         }
+ 
 
         return BuildPath(prev, start, end, dist[end]);
     }
@@ -41,6 +42,8 @@
     {
         var path = new MyList<string>();
         string cur = end;
+        if (dist == double.PositiveInfinity)
+            return (path, 0);
 
         while (cur != null)
         {
@@ -50,5 +53,6 @@
 
         path.Reverse();
         return (path, dist);
+
     }
 }

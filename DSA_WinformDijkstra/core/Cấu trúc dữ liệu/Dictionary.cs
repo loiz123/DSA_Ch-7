@@ -2,8 +2,8 @@
 
 public class MyDictionary<TKey, TValue>
 {
-    private TKey[] keys = new TKey[50];
-    private TValue[] values = new TValue[50];
+    private TKey[] keys = new TKey[1000];
+    private TValue[] values = new TValue[1000];
     private int count = 0;
 
     public int Count => count;

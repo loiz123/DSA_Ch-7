@@ -32,6 +32,8 @@
                 }
             }
         }
+    
+
 
         return BuildPath(prev, start, end, gScore[end]);
     }
@@ -42,6 +44,9 @@
     {
         var path = new MyList<string>();
         string cur = end;
+        if (dist == double.PositiveInfinity)
+            return (path, 0);
+
         while (cur != null)
         {
             path.Add(cur);

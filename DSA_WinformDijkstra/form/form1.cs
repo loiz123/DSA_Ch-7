@@ -42,12 +42,14 @@ public partial class Form1 : Form
             this.label2 = new System.Windows.Forms.Label();
             this.listBoxSteps = new System.Windows.Forms.ListBox();
             this.listAlgorithms = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panelMap
             // 
             this.panelMap.BackColor = System.Drawing.Color.White;
-            this.panelMap.Location = new System.Drawing.Point(30, 12);
+            this.panelMap.Location = new System.Drawing.Point(26, 32);
             this.panelMap.Name = "panelMap";
             this.panelMap.Size = new System.Drawing.Size(678, 456);
             this.panelMap.TabIndex = 0;
@@ -57,20 +59,20 @@ public partial class Form1 : Form
             // 
             this.cbStart.Location = new System.Drawing.Point(728, 138);
             this.cbStart.Name = "cbStart";
-            this.cbStart.Size = new System.Drawing.Size(150, 24);
+            this.cbStart.Size = new System.Drawing.Size(160, 24);
             this.cbStart.TabIndex = 1;
             // 
             // cbEnd
             // 
-            this.cbEnd.Location = new System.Drawing.Point(728, 197);
+            this.cbEnd.Location = new System.Drawing.Point(728, 184);
             this.cbEnd.Name = "cbEnd";
-            this.cbEnd.Size = new System.Drawing.Size(150, 24);
+            this.cbEnd.Size = new System.Drawing.Size(160, 24);
             this.cbEnd.TabIndex = 2;
             this.cbEnd.SelectedIndexChanged += new System.EventHandler(this.cbEnd_SelectedIndexChanged);
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(728, 227);
+            this.btnLoad.Location = new System.Drawing.Point(728, 214);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(100, 30);
             this.btnLoad.TabIndex = 3;
@@ -79,7 +81,7 @@ public partial class Form1 : Form
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(723, 318);
+            this.btnFind.Location = new System.Drawing.Point(728, 305);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(100, 30);
             this.btnFind.TabIndex = 4;
@@ -88,7 +90,7 @@ public partial class Form1 : Form
             // 
             // lblResult
             // 
-            this.lblResult.Location = new System.Drawing.Point(720, 351);
+            this.lblResult.Location = new System.Drawing.Point(725, 351);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(300, 30);
             this.lblResult.TabIndex = 5;
@@ -117,7 +119,7 @@ public partial class Form1 : Form
             this.listBoxSteps.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.listBoxSteps.FormattingEnabled = true;
             this.listBoxSteps.ItemHeight = 16;
-            this.listBoxSteps.Location = new System.Drawing.Point(723, 384);
+            this.listBoxSteps.Location = new System.Drawing.Point(723, 373);
             this.listBoxSteps.Name = "listBoxSteps";
             this.listBoxSteps.Size = new System.Drawing.Size(165, 84);
             this.listBoxSteps.TabIndex = 8;
@@ -132,9 +134,32 @@ public partial class Form1 : Form
             this.listAlgorithms.TabIndex = 9;
             this.listAlgorithms.SelectedIndexChanged += new System.EventHandler(this.listAlgorithms_SelectedIndexChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(725, 256);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Chọn thuật toán";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 29);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Đồ thị";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(900, 500);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.listAlgorithms);
             this.Controls.Add(this.listBoxSteps);
             this.Controls.Add(this.label2);
@@ -146,7 +171,7 @@ public partial class Form1 : Form
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.lblResult);
             this.Name = "Form1";
-            this.Text = "Dijkstra Path Finder";
+            this.Text = "Path Finder";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -288,6 +313,7 @@ public partial class Form1 : Form
                     tempPath = result.path.ToList();
                     AddWrappedArrowPath(listBoxSteps, tempPath, 30);
                 }
+
                 else
                 {
                     tempPath = null;
@@ -430,8 +456,8 @@ public partial class Form1 : Form
     }
     private void Form1_Load(object sender, EventArgs e)
     {
-        // Khắc phục lỗi: Thêm các thuật toán vào ComboBox (listAlgorithms)
-        listAlgorithms.Items.Clear(); // Đảm bảo làm sạch nếu có gọi lại
+        
+        listAlgorithms.Items.Clear(); 
 
         listAlgorithms.Items.Add("BFS");
         listAlgorithms.Items.Add("DFS");
@@ -439,6 +465,7 @@ public partial class Form1 : Form
         listAlgorithms.Items.Add("Bellman-Ford");
         listAlgorithms.Items.Add("Floyd-Warshall");
         listAlgorithms.Items.Add("A*");
+        listAlgorithms.Items.Add("BiDirectional Dijkstra");
 
         // Chọn mặc định thuật toán đầu tiên
         if (listAlgorithms.Items.Count > 0)
@@ -447,4 +474,17 @@ public partial class Form1 : Form
         }
     }
 
+    private void label3_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private Label label4;
+
+    private void label4_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private Label label3;
 }
